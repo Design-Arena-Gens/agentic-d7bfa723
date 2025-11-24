@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sidebar-width: 280px;
+}
+
+* { @apply box-border; }
+
+html, body, #__next { height: 100%; }
+
+/****************
+  Linear-inspired styles
+*****************/
+.bg-app {
+  @apply relative bg-background;
+}
+.bg-app:before {
+  content: "";
+  @apply pointer-events-none absolute inset-0 bg-glow-radial;
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-md shadow-glass border border-white/10;
+}
+
+.button-primary {
+  @apply inline-flex items-center gap-2 rounded-md bg-gradient-to-tr from-accent to-accent2 text-white px-3 py-2 text-sm font-medium shadow-md shadow-accent/20 hover:opacity-95 transition;
+}
+
+.nav-item {
+  @apply flex items-center gap-3 px-3 py-2 rounded-md text-sm text-white/80 hover:text-white hover:bg-white/5 transition;
+}
+
+.icon-badge {
+  @apply inline-flex items-center justify-center rounded-md bg-white/5 border border-white/10 text-white/80;
+}
+
+.search-input {
+  @apply w-full bg-white/5 border border-white/10 rounded-md px-3 py-2 text-sm placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent/50;
+}
